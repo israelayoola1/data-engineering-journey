@@ -1,5 +1,15 @@
 # Today I Learned
 
+## 2026-11-16 — Git version control
+- A commit is an immutable snapshot (trees + blobs), not a list of changes
+- A branch is a movable pointer to a commit; deleting it removes the label, not the commits
+- HEAD points to whatever is checked out right now (usually a branch)
+- Commit only takes what's staged: `git add` first, or `git commit -a`
+- Fast-forward = no merge commit needed; diverged branches create a merge commit
+- Git doesn't check conflict resolutions; check for `<<<<<<<` before committing
+- `git reset --hard HEAD~1` moves a branch back one commit; use with care
+- Team flow: branch → commit → push → PR → merge → pull
+
 ## 2026-11-13 — Shell tools & scripting
 - `>` overwrites a file, `>>` appends; `|` sends one command's output into another
 - `wc -l` counts lines of text, not records; check the file with `head` first
